@@ -20,11 +20,6 @@
     "body": ["console.log($1)"],
     "description": "Log output to console"
   },
-  "Logger effector $effector": {
-    "prefix": "$effector",
-    "body": ["$1.watch((state) => console.log({ '$1': state }))"],
-    "description": "Log output the state of $store."
-  },
   "Stylelint ignore": {
     "prefix": "stylelintignore",
     "body": ["/* stylelint-disable */\n$1\n/* stylelint-enable */"],

@@ -3,11 +3,10 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": ["source.fixAll.eslint", "source.fixAll.stylelint"],
-
+  "editor.stickyScroll.enabled": true,
+  "editor.codeActionsOnSave": ["source.fixAll.eslint"],
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "typescript.tsdk": "node_modules/typescript/lib",
-
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -23,22 +22,36 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
-  "search.exclude": {
-    "**/node_modules": true,
-  },
-
-  "stylelint.validate": [
-    "css",
-    "less",
-    "postcss",
-    "scss"
-  ],
-
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass"],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
+  "search.exclude": {
+    "**/.git": true,
+    "**/.pnpm": true,
+    "**/.yarn": true,
+    "**/.pnp.*": true,
+    "**/.turbo": true,
+    "**/dist/**": true,
+    "**/logs": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/tmp": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.serverless/*/**": true,
+    "**/.swc/*/**": true,
+    "**/.turbo/*/**": true,
+    "**/build/*/**": true,
+    "**/dist/*/**": true,
+    "**/node_modules/*/**": true
+  },
+  "workbench.tree.enableStickyScroll": true,
+  "scm.experimental.showHistoryGraph": true
 }
